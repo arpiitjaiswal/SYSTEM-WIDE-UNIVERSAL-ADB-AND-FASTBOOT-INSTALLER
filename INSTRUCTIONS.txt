@@ -1,0 +1,16 @@
+#INSTRUCTIONS :-
+
+1 - First run the install.bat file ( without admin privilege ).
+
+2 - Press Y on (Question.1) - Do you want to install ADB and Fastboot?
+
+3 - Press Y or N (Question.2) - Install ADB system-wide?**
+
+- Y - To Install ADB and FASTBOOT System-Wide
+- N - To Install ADB and FASTBOOT for Curren-User
+
+4 - Press Y or N (Question.3) - Do you want to install Google device drivers?
+
+5 - Now run the install.bat file again ( with admin privilege ) and Select the choice that you choose previously.
+
+Congratulations !!! Your ADB and FASTBOOT Drivers has been install. Now you can access ADB directly by typing ( adb shell ) in address bar of explorer or in cmd. 
