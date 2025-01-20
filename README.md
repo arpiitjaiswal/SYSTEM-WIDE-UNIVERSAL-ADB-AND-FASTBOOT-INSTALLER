@@ -18,13 +18,12 @@ A simple batch script for installing Android Debug Bridge (ADB) and Fastboot too
 ---
 
 ## Installation:
-- **First run the install.bat file ( without admin privilege ).**
+- **First run the install.bat file.**
 - **Press Y on (Question.1) - Do you want to install ADB and Fastboot?**
 - **Press Y or N (Question.2) - Install ADB system-wide?**
 - Y - To Install ADB and FASTBOOT System-Wide
 - N - To Install ADB and FASTBOOT for Curren-User
 - **Press Y or N (Question.3) - Do you want to install Google device drivers?**
-- **Now run the install.bat file again ( with admin privilege ) and Select the choice that you choose previously.**
 
 ---
 
