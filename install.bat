@@ -1,12 +1,23 @@
 @ECHO off
 CLS
+COLOR C
+ECHO Requesting administrative privileges...
+CD /D "%~dp0"
+NET SESSION >nul 2>&1
+IF %ERRORLEVEL% NEQ 0 (
+    PING localhost -n 2 >nul
+    PowerShell Start-Process '%~0' -Verb RunAs
+    EXIT /B
+)
+@ECHO off
+CLS
 TITLE SYSTEM-WIDE UNIVERSAL ADB AND FASTBOOT BY ARPIT
-COLOR 30
+COLOR 3
 ECHO ###############################################################################
 ECHO #                                                                             #
 ECHO #             SYSTEM-WIDE UNIVERSAL ADB AND FASTBOOT INSTALLER                #
 ECHO #                                                                             #
-ECHO #                                 VERSION 1                                   #
+ECHO #                                VERSION 1.1                                  #
 ECHO #                                                                             #
 ECHO #                                 BY ARPIT                                    #
 ECHO #                                                                             #
