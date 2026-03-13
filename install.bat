@@ -17,14 +17,14 @@ ECHO ###########################################################################
 ECHO #                                                                             #
 ECHO #             SYSTEM-WIDE UNIVERSAL ADB AND FASTBOOT INSTALLER                #
 ECHO #                                                                             #
-ECHO #                                VERSION 1.1                                  #
+ECHO #                                VERSION 1.2                                  #
 ECHO #                                                                             #
 ECHO #                                 BY ARPIT                                    #
 ECHO #                                                                             #
 ECHO #                 GITHUB - https://github.com/arpiitjaiswal                   #
 ECHO #                  TELEGRAM - https://t.me/arpiit_jaiswal                     #
 ECHO #                                                                             #
-ECHO #              ANDROID DEBUG BRIDGE VERSION 35.0.2 (July 2024)                #
+ECHO #              ANDROID DEBUG BRIDGE VERSION 36.0.2 (Sept 2025)                #
 ECHO #                  GOOGLE USB DRIVER VERSION (23 July 2020)                   #
 ECHO #                                                                             #
 ECHO ###############################################################################
@@ -58,7 +58,6 @@ IF EXIST %WINDIR%\adb.exe DEL %WINDIR%\adb.exe /f /q 1>nul 2>>%USERPROFILE%\Desk
 IF EXIST %WINDIR%\AdbWinApi.dll DEL %WINDIR%\AdbWinApi.dll /f /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log
 IF EXIST %WINDIR%\AdbWinUsbApi.dll DEL %WINDIR%\AdbWinUsbApi.dll /f /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log
 IF EXIST %WINDIR%\fastboot.exe DEL %WINDIR%\fastboot.exe /f /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log
-IF EXIST %WINDIR%\dmtracedump.exe DEL %WINDIR%\dmtracedump.exe /f /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log
 IF EXIST %WINDIR%\etc1tool.exe DEL %WINDIR%\etc1tool.exe /f /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log
 IF EXIST %WINDIR%\hprof-conv.exe DEL %WINDIR%\hprof-conv.exe /f /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log
 IF EXIST %WINDIR%\libwinpthread-1.dll DEL %WINDIR%\libwinpthread-1.dll /f /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log
@@ -73,7 +72,6 @@ XCOPY adb\adb.exe %USERPROFILE%\adb\ /y /q 1>nul 2>>%USERPROFILE%\Desktop\adb-in
 XCOPY adb\AdbWinApi.dll %USERPROFILE%\adb\ /y /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log && SET /a COUNT=%COUNT%+1
 XCOPY adb\AdbWinUsbApi.dll %USERPROFILE%\adb\ /y /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log && SET /a COUNT=%COUNT%+1
 XCOPY adb\fastboot.exe %USERPROFILE%\adb\ /y /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log && SET /a COUNT=%COUNT%+1
-XCOPY adb\dmtracedump.exe %USERPROFILE%\adb\ /y /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log && SET /a COUNT=%COUNT%+1
 XCOPY adb\etc1tool.exe %USERPROFILE%\adb\ /y /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log && SET /a COUNT=%COUNT%+1
 XCOPY adb\hprof-conv.exe %USERPROFILE%\adb\ /y /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log && SET /a COUNT=%COUNT%+1
 XCOPY adb\libwinpthread-1.dll %USERPROFILE%\adb\ /y /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log && SET /a COUNT=%COUNT%+1
@@ -104,7 +102,6 @@ IF EXIST %WINDIR%\adb.exe DEL %WINDIR%\adb.exe /f /q 1>nul 2>>%USERPROFILE%\Desk
 IF EXIST %WINDIR%\AdbWinApi.dll DEL %WINDIR%\AdbWinApi.dll /f /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log
 IF EXIST %WINDIR%\AdbWinUsbApi.dll DEL %WINDIR%\AdbWinUsbApi.dll /f /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log
 IF EXIST %WINDIR%\fastboot.exe DEL %WINDIR%\fastboot.exe /f /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log
-IF EXIST %WINDIR%\dmtracedump.exe DEL %WINDIR%\dmtracedump.exe /f /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log
 IF EXIST %WINDIR%\etc1tool.exe DEL %WINDIR%\etc1tool.exe /f /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log
 IF EXIST %WINDIR%\hprof-conv.exe DEL %WINDIR%\hprof-conv.exe /f /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log
 IF EXIST %WINDIR%\libwinpthread-1.dll DEL %WINDIR%\libwinpthread-1.dll /f /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log
@@ -119,7 +116,6 @@ XCOPY adb\adb.exe %SYSTEMDRIVE%\adb\ /y /q 1>nul 2>>%USERPROFILE%\Desktop\adb-in
 XCOPY adb\AdbWinApi.dll %SYSTEMDRIVE%\adb\ /y /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log && SET /a COUNT=%COUNT%+1
 XCOPY adb\AdbWinUsbApi.dll %SYSTEMDRIVE%\adb\ /y /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log && SET /a COUNT=%COUNT%+1
 XCOPY adb\fastboot.exe %SYSTEMDRIVE%\adb\ /y /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log && SET /a COUNT=%COUNT%+1
-XCOPY adb\dmtracedump.exe %SYSTEMDRIVE%\adb\ /y /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log && SET /a COUNT=%COUNT%+1
 XCOPY adb\etc1tool.exe %SYSTEMDRIVE%\adb\ /y /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log && SET /a COUNT=%COUNT%+1
 XCOPY adb\hprof-conv.exe %USERPROFILE%\adb\ /y /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log && SET /a COUNT=%COUNT%+1
 XCOPY adb\libwinpthread-1.dll %SYSTEMDRIVE%\adb\ /y /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log && SET /a COUNT=%COUNT%+1
