@@ -2,13 +2,16 @@
 CLS
 COLOR C
 ECHO Requesting administrative privileges...
-CD /D "%~dp0"
 NET SESSION >nul 2>&1
 IF %ERRORLEVEL% NEQ 0 (
     PING localhost -n 2 >nul
     PowerShell Start-Process '%~0' -Verb RunAs
     EXIT /B
 )
+
+:: --- CRITICAL FIX: Set working directory to script location AFTER elevation ---
+CD /D "%~dp0"
+
 @ECHO off
 CLS
 TITLE SYSTEM-WIDE UNIVERSAL ADB AND FASTBOOT BY ARPIT
@@ -117,7 +120,7 @@ XCOPY adb\AdbWinApi.dll %SYSTEMDRIVE%\adb\ /y /q 1>nul 2>>%USERPROFILE%\Desktop\
 XCOPY adb\AdbWinUsbApi.dll %SYSTEMDRIVE%\adb\ /y /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log && SET /a COUNT=%COUNT%+1
 XCOPY adb\fastboot.exe %SYSTEMDRIVE%\adb\ /y /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log && SET /a COUNT=%COUNT%+1
 XCOPY adb\etc1tool.exe %SYSTEMDRIVE%\adb\ /y /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log && SET /a COUNT=%COUNT%+1
-XCOPY adb\hprof-conv.exe %USERPROFILE%\adb\ /y /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log && SET /a COUNT=%COUNT%+1
+XCOPY adb\hprof-conv.exe %SYSTEMDRIVE%\adb\ /y /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log && SET /a COUNT=%COUNT%+1
 XCOPY adb\libwinpthread-1.dll %SYSTEMDRIVE%\adb\ /y /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log && SET /a COUNT=%COUNT%+1
 XCOPY adb\make_f2fs.exe %SYSTEMDRIVE%\adb\ /y /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log && SET /a COUNT=%COUNT%+1
 XCOPY adb\make_f2fs_casefold.exe %SYSTEMDRIVE%\adb\ /y /q 1>nul 2>>%USERPROFILE%\Desktop\adb-installer.log && SET /a COUNT=%COUNT%+1
